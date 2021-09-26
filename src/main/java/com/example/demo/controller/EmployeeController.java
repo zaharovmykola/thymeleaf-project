@@ -22,4 +22,11 @@ public class EmployeeController {
         return "list-employees";
     }
 
+    @GetMapping("/addEmployeeForm")
+    public String addEMployeeForm(Model model){
+        Employee newEmployee = new Employee();
+        model.addAttribute("employee", newEmployee);
+        return "add-employee-form";
+    }
+
 }
