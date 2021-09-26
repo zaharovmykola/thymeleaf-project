@@ -4,32 +4,41 @@
     <head>
         <meta charset="UTF-8">
         <title>List Employees</title>
-
+        <link
+                rel="stylesheet"
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous"
+        >
     </head>
 
     <body>
 
-        <h2>List Employees</h2>
-        <hr/>
-        <table border="1">
+        <div class="container">
 
-            <thead>
-                <tr>
-                   <th>Name</th>
-                   <th>Email</th>
-                   <th>Department</th>
-                </tr>
-            </thead>
+            <h2>List Employees</h2>
+            <hr/>
+            <table class="table table-bordered table-striped">
 
-            <tboby>
-                <tr th:each="employee: ${employees}">
-                    <td th:text="${employee.name}"></td>
-                    <td th:text="${employee.email}"></td>
-                    <td th:text="${employee.department}"></td>
-                </tr>
-            </tboby>
+                <thead>
+                    <tr>
+                       <th>Name</th>
+                       <th>Email</th>
+                       <th>Department</th>
+                    </tr>
+                </thead>
 
-        </table>
+                <tboby>
+                    <tr th:each="employee: ${employees}">
+                        <td th:text="${employee.name}"></td>
+                        <td th:text="${employee.email}"></td>
+                        <td th:text="${employee.department}"></td>
+                    </tr>
+                </tboby>
+
+            </table>
+
+        </div>
 
     </body>
 
