@@ -45,4 +45,10 @@ public class EmployeeController {
         return "add-employee-form";
     }
 
+    @GetMapping("/deleteEmployee")
+    public String deleteEmployee (@RequestParam Long employeeId) {
+        employeeRepository.deleteById(employeeId);
+        return "redirect:/showEmployees/list";
+    }
+
 }
